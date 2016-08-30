@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" android:background="@android:color/holo_blue_dark">
+        <ImageButton
+                android:id="@+id/previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@android:drawable/ic_media_rew"/>
+
+        <TextView
+                android:id="@+id/date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Novembre 2016" android:textAlignment="center"
+                android:textColor="@android:color/background_light" android:textSize="16dp" android:textStyle="bold"/>
+
+        <ImageButton
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@android:drawable/ic_media_ff"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TableLayout
+                android:id="@+id/calendar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                    android:background="@android:color/background_light">
+            <TableRow android:layout_height="wrap_content" android:layout_width="match_parent">
+                <TextView android:text="Lundi" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Mardi" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Mercredi" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Jeudi" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Vendredi" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Samedi" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+            </TableRow>
+            <TableRow android:layout_height="wrap_content" android:layout_width="match_parent">
+                <TextView android:id="@+id/d1" android:text="1" android:textColor="@android:color/black" android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:id="@+id/d2" android:text="1" android:textColor="@android:color/black" android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:id="@+id/d3" android:text="1" android:textColor="@android:color/black" android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:id="@+id/d4" android:text="1" android:textColor="@android:color/black" android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:id="@+id/d5" android:text="1" android:textColor="@android:color/black" android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:id="@+id/d6" android:text="1" android:textColor="@android:color/black" android:layout_weight="1" android:textAlignment="center"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/dayview" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:id="@+id/day" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <View
+            android:id="@+id/separate1"
+            android:layout_width="match_parent"
+            android:layout_height="3dip"
+            android:background="#FF909090"
+            android:layout_marginBottom="10dp" android:layout_below="@+id/clock"/>
+    <LinearLayout
+            android:id="@+id/tablerow1"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_alignParentStart="true" android:layout_below="@+id/separate1"
+            android:background="@color/bright_foreground_disabled_material_dark" android:layout_marginBottom="5dp">
+        <ImageView
+                android:src="@drawable/clockstart"
+                android:layout_column="1" android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"/>
+        <TextView android:text="Arrivée" android:textStyle="bold" android:layout_column="1"
+                  android:textSize="16dp" android:layout_width="wrap_content" android:paddingTop="20dp"
+                  android:layout_height="fill_parent" android:layout_gravity="center"/>
+        <TextView android:id="@+id/startreport"
+                  android:layout_width="match_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_column="2" android:text="--:--"
+                  android:textSize="26dp" android:textStyle="bold|italic" android:paddingTop="16dp"
+                  android:singleLine="false" android:layout_marginRight="10dp" android:textAlignment="textEnd"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/tablerow2"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:background="@color/bright_foreground_disabled_material_dark" android:layout_below="@+id/tablerow1">
+        <ImageView
+                android:src="@drawable/clockend"
+                android:layout_column="1" android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"/>
+        <TextView android:text="Départ" android:textStyle="bold" android:layout_column="1"
+                  android:textSize="16dp" android:layout_width="wrap_content" android:paddingTop="20dp"
+                  android:layout_height="fill_parent" android:layout_gravity="center"/>
+        <TextView android:id="@+id/endreport"
+                  android:layout_width="match_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_column="2" android:text="--:--"
+                  android:textSize="26dp" android:textStyle="bold|italic" android:paddingTop="16dp"
+                  android:textAlignment="textEnd"
+                  android:singleLine="false" android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <View
+            android:id="@+id/separate2"
+            android:layout_width="match_parent"
+            android:layout_height="3dip"
+            android:background="#FF909090"
+            android:layout_marginBottom="10dp" android:layout_below="@+id/clock" android:layout_marginTop="10dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TableLayout
+                android:id="@+id/detailpause"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light">
+            <TableRow android:layout_height="wrap_content" android:layout_width="match_parent">
+                <TextView android:text="Début Pause" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Fin Pause" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Type" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+                <TextView android:text="Durée" android:textColor="@android:color/black"
+                          android:layout_weight="1" android:textAlignment="center"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>

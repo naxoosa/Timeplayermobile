@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "143107290742",
+    "project_id": "timeplayer-140606"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143107290742:android:1040ee2a47a17fea",
+        "android_client_info": {
+          "package_name": "ch.naxoo.sirh.timeplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143107290742-dtuh4k5gt0orso395qkqliusijhdil7g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.naxoo.sirh.timeplayer",
+            "certificate_hash": "A0C116135EF655EE3F9361097AF3DA88A3810BD2"
+          }
+        },
+        {
+          "client_id": "143107290742-unt18npiuld6trjrv507r4h3ts6mpv5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHY-QAhUBo-551GBbitHqsBZcIECUOt7o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
